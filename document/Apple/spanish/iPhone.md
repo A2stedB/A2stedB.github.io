@@ -1,4 +1,7 @@
-iPhone es la línea de teléfonos inteligentes de Apple. Actualmente, se pueden distinguir las siguientes sublíneas:
+> [!NOTE]
+> A fecha de 20-12-2025
+
+iPhone es la línea de teléfonos inteligentes de Apple. Actualmente, se pueden distinguir las siguientes productos:
 
 - iPhone 17 Pro
 - iPhone Air

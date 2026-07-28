@@ -1,3 +1,6 @@
+> [!NOTE]
+> A fecha de 20-12-2025
+
 Mac es la línea general de productos de ordenadores de Apple, la cual se puede distinguir en diferentes líneas de productos:
 
 - MacBook Air
@@ -13,13 +16,6 @@ Generalmente, cuando se habla de "Mac", se asocia principalmente a los ordenador
 # MacBook Air
 
 El MacBook Air se caracteriza por ser ligero y portátil, con una excelente duración de batería y un rendimiento constante, todo ello con un diseño de refrigeración pasiva (sin ventiladores) que garantiza cero ruido.
-
-### Productos específicos y especificaciones
-
-| Tamaño |                            Color                             | Peso (Kg) |                 Batería (Autonomía)                  |        Pantalla        | CPU y GPU |       Memoria unificada       |          Almacenamiento          | Precio       |
-| :----: | :----------------------------------------------------------: | :-------: | :--------------------------------------------------: | :--------------------: | :-------: | :---------------------------: | :------------------------------: | ------------ |
-|  13''  | Azul cielo<br>Plata<br>Blanco estrella<br>Medianoche<br><br> |  1,24 Kg  |  53,8 vatios-hora<br><br>Uso moderado: 11~13 horas   | Pantalla Liquid Retina |    M4     | Inicial 16 GB<br>Máximo 32 GB | Inicial 256 GB<br>Máximo<br>2 TB | Desde 1099 € |
-|  15''  |     Azul cielo<br>Plata<br>Blanco estrella<br>Medianoche     |  1,53 Kg  | 66,5 vatios-hora<br><br>Uso moderado:<br>13~14 horas | Pantalla Liquid Retina |    M4     | Inicial 16 GB<br>Máximo 32 GB | Inicial 256 GB<br>Máximo<br>2 TB | Desde 1399 € |
 
 ### Público objetivo
 
@@ -42,13 +38,6 @@ Las pantallas de Apple siempre han sido famosas por su excelente calibración de
 
 Las características del MacBook Pro son alto rendimiento, gran duración de la batería y una pantalla excelente, manteniendo al mismo tiempo la portabilidad de un portátil. El posicionamiento del MacBook Pro podría definirse como una estación de trabajo móvil.
 
-### Productos específicos y especificaciones
-
-| Tamaño | Color | Peso (Kg) | Batería (Autonomía) | Pantalla | CPU y GPU | Memoria unificada | Almacenamiento | Posicionamiento | Precio |
-| :--: | :----------------------: | :----: | :----------------------------: | :-----------------------------------------: | :--------------------: | :---------------: | :-----------------: | :----------------------------------: | -------- |
-| 14'' | Plata<br>Blanco estrella<br>Medianoche<br><br> | 1,56 Kg | 53,8 vatios-hora<br><br>Uso moderado: 12~14 horas | Pantalla Liquid Retina XDR<br><br>Soporta tecnología de frecuencia de actualización dinámica ProMotion | M5<br>M4 Pro<br>M4 Max | Inicial 16 GB<br>Máximo 32 GB | Inicial 512 GB<br>Máximo<br>4 TB | Necesidad de moverse con frecuencia<br><br>Quiere probar el sistema Mac o experimentar el ecosistema Apple completo | Desde 1829 € |
-| 16'' | Plata<br>Blanco estrella<br>Medianoche | 2,14 Kg | 66,5 vatios-hora<br>Uso moderado:<br>Continuo 13~14 horas | Pantalla Liquid Retina XDR<br><br>Soporta tecnología de frecuencia de actualización dinámica ProMotion | M4 Pro<br>M4 Max | Inicial 24 GB<br>Máximo 128 GB | Inicial 512 GB<br>Máximo<br>8 TB | Necesita una pantalla relativamente grande<br><br>Necesita una autonomía mayor | Desde 2849 € |
-
 ### Público objetivo
 En general, el MacBook Pro es adecuado para cualquier usuario que necesite alto rendimiento, lo que incluye, entre otros, edición de vídeo, edición de imágenes o creación musical profesional.
 Sobre esta base, el de 14 pulgadas es adecuado para personas que necesitan tener en cuenta cierta portabilidad o usuarios que necesitan una alta duración de la batería.
@@ -69,7 +58,7 @@ En general, todos los MacBook tienen una excelente duración de batería, un fun
 
 # iMac
 
-El iMac es el producto "todo en uno" de la línea Mac. Como ordenador de sobremesa, su característica es que está listo para usar nada más sacarlo de la caja (incluye ratón y teclado), tiene una pantalla excelente y un sonido excelente, además de un buen rendimiento. Como todo en uno, otra característica del iMac es que ocupa poco espacio.
+El iMac es el producto "todo en uno" de los productos de Mac. Como ordenador de sobremesa, su característica es que está listo para usar nada más sacarlo de la caja (incluye ratón y teclado), tiene una pantalla excelente y un sonido excelente, además de un buen rendimiento. Como todo en uno, otra característica del iMac es que ocupa poco espacio.
 
 ### Productos específicos y especificaciones
 
@@ -97,14 +86,6 @@ Desde el punto de vista de la apariencia, el iMac tiene un diseño industrial ex
 # Mac mini
 
 El Mac mini es el ordenador de "sobremesa" básico en la línea de productos Mac. Sus características son que es compacto y silencioso, y puede liberar completamente el consumo de energía del chip.
-### Productos específicos y especificaciones
-
-| CPU | Memoria unificada | Almacenamiento | Precio |
-| :------------------: | :--------------: | :-----------------: | :------: |
-| M4 | Inicial 16 GB<br>Máximo 32 GB | Inicial 256 GB<br>Máximo<br>2 TB | Desde 599 € |
-| M4 Pro<br>(Cantidad de GPU seleccionable) | Inicial 24 GB<br>Máximo 64 GB | Inicial 512 GB<br>Máximo<br>8 TB | Desde 1399 € |
-Todas las versiones pueden elegir puerto de red LAN.
-
 ### Público objetivo
 
 El Mac mini es adecuado para personas que desean un ordenador de sobremesa de tamaño pequeño, o personas que lo usan en una posición fija, como un puesto de trabajo en una oficina. Al igual que el MacBook Air, también es adecuado para cualquier persona que quiera experimentar macOS o el ecosistema completo de Apple.
@@ -122,13 +103,6 @@ La disipación de calor activa del Mac mini puede liberar completamente el rendi
 # Mac Studio
 
 Si el Mac mini es un ordenador de sobremesa básico suficiente para el uso diario de la mayoría de las personas, entonces el Mac Studio es el otro extremo. El Mac Studio es un ordenador de nivel de estación de trabajo profesional. Su rendimiento es varias veces superior al del Mac mini, manteniendo un tamaño no tan grande, al tiempo que permite liberar completamente los chips de la serie M de mayor rendimiento actuales.
-### Productos específicos y especificaciones
-
-| CPU | Memoria unificada | Almacenamiento | Precio |
-| :--------------------: | :--------------: | :-----------------: | :------: |
-| M4 Max<br>(Cantidad de GPU seleccionable) | Inicial 32 GB<br>Máximo 32 GB | Inicial 256 GB<br>Máximo<br>2 TB | Desde 1999 € |
-| M3 Ultra<br>(Cantidad de GPU seleccionable) | Inicial 24 GB<br>Máximo 64 GB | Inicial 512 GB<br>Máximo<br>8 TB | Desde 3999 € |
-Todas las versiones pueden elegir venir con puerto de red LAN.
 
 ### Público objetivo
 

@@ -1,3 +1,6 @@
+> [!NOTE]
+> A fecha de 20-12-2025
+
 Apple Watch es la línea de relojes inteligentes de Apple, que se divide en los siguientes productos:
 - Series
 - SE

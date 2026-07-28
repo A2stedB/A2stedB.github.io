@@ -1,4 +1,7 @@
-El iPad es la línea de productos de tablets de Apple, que se divide en las siguientes sublíneas:
+> [!NOTE]
+> A fecha de 20-12-2025
+
+El iPad es la línea de productos de tablets de Apple, que se divide en las siguientes productos:
 
 * **iPad Pro**
 * **iPad Air**
