@@ -160,6 +160,7 @@ runs:
       run: ${{ inputs.build-cmd || '$PACKAGE_MANAGER run build' }}
 
     - name: Copy local data to dist folder
+      shell: bash
       run: | 
         cp -r ./docs ./dist/docs
 
