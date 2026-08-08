@@ -1,5 +1,7 @@
 ---
-import Skill_Icon from "../component/skill-card.astro";
+import Project_card from "../component/project_card_template.astro";
+import Project_modal from "../component/project_modal_template.astro";
+import Test_Project from "../project-page/test-project.astro";
 ---
 
 <html lang="en">
@@ -15,37 +17,77 @@ import Skill_Icon from "../component/skill-card.astro";
 		<link rel="stylesheet" href="style/style.css" />
 		<link rel="stylesheet" href="style/font-settings.css" />
 		<link rel="stylesheet" href="style/colour-palette.css" />
-
 		<script src="../script/main.js"></script>
 		<title>My website</title>
 	</head>
+
 	<body>
-		<h1>Hi!</h1>
-		<h1>I am He</h1>
-
-		<div>
-			<h1>Projects</h1>
-		</div>
-
-		<div>
-			<h1>Skills</h1>
-			<!-- <div class="skill-grid-wrapper">
-				<div class="skill-grid">
-					<Skill_Icon icon_path="icon/icon_cpp.png" description="C++" />
-					<Skill_Icon icon_path="icon/icon_cpp.png" description="C++" />
-					<Skill_Icon icon_path="icon/icon_cpp.png" description="C++" />
-					<Skill_Icon icon_path="icon/icon_cpp.png" description="C++" />
-					<Skill_Icon icon_path="icon/icon_cpp.png" description="C++" />
-					<Skill_Icon icon_path="icon/icon_cpp.png" description="C++" />
+		<main>
+			<section id="presentation" class="slide non-selectable">
+				<div id="presentation-container">
+					<div class="presentation-box introduction">
+						<div>
+							<h1>Hi!</h1>
+							<h1>I am He<span id="underline">_</span></h1>
+						</div>
+						<div>- Software / Game Developer & CS Student</div>
+					</div>
+					<div class="presentation-box introduction-content">
+						<div class="presentation introduction-content-decoration">
+							
+						</div>
+						<div>
+							<ul>
+								<li>CS Student</li>
+								<li>Software / Game developer</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</div> -->
-		</div>
+			</section>
 
-		<div>
-			<h1>Education</h1>
-		</div>
-		<div>
-			Contact
+			<div class="division-line"></div>
+
+			<section id="project" class="slide non-selectable">
+				<div id="project-container"></div>
+			</section>
+
+			<div class="division-line"></div>
+
+			<!-- <div class="page" data-element-type="page" data-shown-status="hidden" data-delay="200">
+				<section id="project">
+					<div>
+						<h1>Projects</h1>
+					</div>
+					<div class="project-scroll-container">
+						<Project_card
+							project_name="Kingless Dungeon"
+							description="A game of hack and slash platformer made in Unity"
+						/>
+						<Project_card
+							project_name="Bunkers Inc."
+							description="A game of resource management and survival made with C++"
+						/>
+						<Project_card
+							project_name="Pacific Tactics"
+							description="A local multiplayer game of strategic made with JavaScript with Phaser"
+						/>
+					</div>
+				</section>
+			</div>
+
+			<div class="page" data-element-type="page" data-shown-status="hidden" data-delay="200">
+				<h1>Education</h1>
+			</div>
+			<div class="page"  data-element-type="page" data-shown-status="hidden" data-delay="200">
+				Contact
+			</div> -->
+		</main>
+
+		<div class="modal-container">
+			<Project_modal project_name="Kingless Dungeon">
+				<Test_Project />
+			</Project_modal>
 		</div>
 	</body>
 </html>
