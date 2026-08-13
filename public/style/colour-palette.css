@@ -3,4 +3,40 @@
     --rice-white: #c7c3a7;
     --soft-black: #3c3a33;
     /* --soft-black: #4e4b42; */
+
+    --background-light-theme: var(--rice-white);
+    --background-dark-theme: #1c1914;
+
+    /*Grid*/
+    --grid-dark-margin-colour:#0d0905;
+    --grid-light-margin-colour:#c1bd9f;
+
+    --background-light-theme-grid:
+        linear-gradient(var(--grid-light-margin-colour), 
+            var(--grid-light-margin-colour) var(--grid-dark-section), 
+            transparent var(--grid-dark-section), 
+            transparent var(--grid-transparent-section),
+            var(--grid-light-margin-colour) var(--grid-transparent-section),
+            var(--grid-light-margin-colour)),
+        linear-gradient(to right, var(--grid-light-margin-colour),
+            var(--grid-light-margin-colour) var(--grid-dark-section),
+            transparent var(--grid-dark-section),
+            transparent var(--grid-transparent-section),
+            var(--grid-light-margin-colour) var(--grid-transparent-section),
+            var(--grid-light-margin-colour));
+
+    --background-dark-theme-grid:
+        linear-gradient(var(--grid-dark-margin-colour),  /* 0% */
+            var(--grid-dark-margin-colour) var(--grid-dark-section), 
+            transparent var(--grid-dark-section), 
+            transparent var(--grid-transparent-section), 
+            var(--grid-dark-margin-colour) var(--grid-transparent-section), 
+            var(--grid-dark-margin-colour)),
+        linear-gradient(to right, var(--grid-dark-margin-colour),
+            var(--grid-dark-margin-colour) var(--grid-dark-section),
+            transparent var(--grid-dark-section),
+            transparent var(--grid-transparent-section),
+            var(--grid-dark-margin-colour) var(--grid-transparent-section),
+            var(--grid-dark-margin-colour));
+
 }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NieR UI Reference</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 游离于文档流之外的侧边垂直文本 -->
+    <div class="vertical-edge-text">
+        SYS.OVERRIDE // PORTFOLIO_V1.0
+    </div>
+
+    <main class="base-layout">
+
+        <!-- Section 1: 装饰性系统日志 (微观细节) -->
+        <section class="ui-section section-logs">
+            <div class="system-log" id="boot-log">
+                <!-- 这里的文字将由 JS 动态打字输出 -->
+            </div>
+        </section>
+
+        <!-- Section 2: 物理分割刻度线 (代替普通的底边框) -->
+        <section class="ui-section section-alignment">
+            <div class="alignment-mark"></div>
+        </section>
+
+        <!-- Section 3: 取景器角框 + 非对称越界标签 -->
+        <section class="ui-section section-card">
+            <div class="nier-bracket-container">
+                <!-- 越界一半的细长标签 -->
+                <div class="overlapping-label">OBJ.01 // PHYSICS_ENGINE</div>
+
+                <!-- 标题与闪烁光标 -->
+                <h2 class="card-title">Rigid Body Dynamics<span class="blinking-cursor">_</span></h2>
+
+                <p class="card-text">
+                    Integrating GLFW with Box2D for rigid-body transformations.
+                    Continuous collision detection enabled.
+                </p>
+                <ul class="card-list">
+                    <li>[ + ] Memory Allocation Optimized</li>
+                    <li>[ + ] Vector Lifetime Managed</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 4: 带有扫描线动效的交互按钮 -->
+        <section class="ui-section section-interactive">
+            <button class="nier-button">
+                [ COMPILE AND RUN ]
+            </button>
+        </section>
+
+        <!-- Section 5: 底部条形码斑块 (物理封底) -->
+        <section class="ui-section section-footer">
+            <div class="barcode"></div>
+        </section>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

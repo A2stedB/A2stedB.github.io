@@ -30,3 +30,7 @@ How do I want the "theme" of the page?
 
 With that information, how do I structured the HTML?
 - Each slide would be a div or a section, which contains the content as child.
+
+
+the dark background with loading text transite into the white presentation slide
+

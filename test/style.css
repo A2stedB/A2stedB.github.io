@@ -1,0 +1,248 @@
+/* 全局变量定义：《尼尔》的经典废土/纸质色调与柔和黑 */
+:root {
+    --rice-white: #dcd8c0;
+    --soft-black: #4d4a41;
+    --line-thin: 1px solid var(--soft-black);
+    --line-thick: 2px solid var(--soft-black);
+}
+
+body {
+    background-color: var(--rice-white);
+    color: var(--soft-black);
+    font-family: "Courier New", Courier, monospace;
+    /* 使用等宽字体增强代码/机甲感 */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.base-layout {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 5%;
+    position: relative;
+}
+
+/* 各个区域的基础间距 */
+.ui-section {
+    margin-bottom: 60px;
+}
+
+/* =========================================
+   1. 垂直越界文本 (Asymmetric Floating)
+   ========================================= */
+.vertical-edge-text {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    /* 文字竖向排列 */
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    opacity: 0.4;
+    user-select: none;
+}
+
+/* =========================================
+   2. 装饰性系统日志 (Micro-details)
+   ========================================= */
+.system-log {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    opacity: 0.6;
+}
+
+/* =========================================
+   3. 物理分割刻度线 (Alignment Marks)
+   ========================================= */
+.alignment-mark {
+    width: 100%;
+    height: 1px;
+    background-color: var(--soft-black);
+    position: relative;
+    opacity: 0.3;
+}
+
+/* 利用伪元素在横线两端画出像游标卡尺一样的竖线刻度 */
+.alignment-mark::before,
+.alignment-mark::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    width: 1px;
+    height: 9px;
+    background-color: var(--soft-black);
+}
+
+.alignment-mark::before {
+    left: 0;
+}
+
+.alignment-mark::after {
+    right: 0;
+}
+
+/* =========================================
+   4. 取景器角框 (Corner Brackets)
+   ========================================= */
+.nier-bracket-container {
+    position: relative;
+    padding: 40px 30px;
+}
+
+.nier-bracket-container::before,
+.nier-bracket-container::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: var(--soft-black);
+    border-style: solid;
+}
+
+/* 左上角：只留上边和左边 */
+.nier-bracket-container::before {
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px;
+}
+
+/* 右下角：只留下边和右边 */
+.nier-bracket-container::after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 2px 2px 0;
+}
+
+/* 越界的标签 */
+.overlapping-label {
+    position: absolute;
+    top: -10px;
+    /* 向上凸出卡片边界 */
+    left: -10px;
+    /* 向左凸出卡片边界 */
+    background-color: var(--rice-white);
+    /* 盖住底下的边框 */
+    border: var(--line-thin);
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    z-index: 2;
+}
+
+/* 卡片内部排版 */
+.card-title {
+    margin: 0 0 15px 0;
+    font-size: 1.5rem;
+    font-family: "Arial", sans-serif;
+    /* 标题可以用无衬线体区别于正文 */
+}
+
+.card-text {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.card-list li {
+    margin-bottom: 8px;
+}
+
+/* 闪烁的终端光标 */
+.blinking-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   5. 悬停扫描线按钮 (Glitch & Scan)
+   ========================================= */
+.nier-button {
+    background: transparent;
+    border: var(--line-thin);
+    color: var(--soft-black);
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 12px 24px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    /* 确保扫描线不会溢出按钮 */
+    transition: all 0.2s;
+}
+
+.nier-button:hover {
+    background-color: rgba(77, 74, 65, 0.05);
+    /* 悬停时微微变暗 */
+}
+
+/* 隐藏的扫描线，悬停时触发动画 */
+.nier-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--soft-black);
+    opacity: 0;
+}
+
+.nier-button:hover::after {
+    opacity: 0.4;
+    animation: scanline 1.2s linear infinite;
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+/* =========================================
+   6. 条形码封底 (Barcode Blocks)
+   ========================================= */
+.section-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.barcode {
+    width: 120px;
+    height: 30px;
+    opacity: 0.7;
+    /* 纯 CSS 绘制的不规则竖线斑块 */
+    background-image:
+        repeating-linear-gradient(to right,
+            var(--soft-black) 0,
+            var(--soft-black) 2px,
+            transparent 2px,
+            transparent 5px,
+            var(--soft-black) 5px,
+            var(--soft-black) 6px,
+            transparent 6px,
+            transparent 10px);
+}

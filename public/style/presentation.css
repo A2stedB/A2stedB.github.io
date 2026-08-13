@@ -1,0 +1,180 @@
+/* =========================================
+   Slide 1: Presentation 布局设定
+   ========================================= */
+#presentation-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    /* 确保左右内容在垂直方向上绝对居中 */
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.presentation-box {
+    flex-basis: 50%;
+    /* PC端平分秋色 */
+}
+
+/* 左侧标题样式微调 */
+.hero-title-group h1 {
+    font-size: 4rem;
+    margin: 0 0 10px 0;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+}
+
+.blinking-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* 侧边垂直背景文字 */
+.vertical-edge-text {
+    position: fixed;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    opacity: 0.3;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* =========================================
+   尼尔风：角框与越界标签
+   ========================================= */
+.nier-bracket-container {
+    position: relative;
+    padding: 40px;
+    max-width: 500px;
+    /* 限制右侧阅读宽度，避免排版松散 */
+}
+
+.nier-bracket-container::before,
+.nier-bracket-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-color: var(--soft-black);
+    border-style: solid;
+}
+
+.nier-bracket-container::before {
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px;
+}
+
+.nier-bracket-container::after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 2px 2px 0;
+}
+
+.overlapping-label {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    background-color: var(--rice-white);
+    border: 1px solid var(--soft-black);
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 2;
+}
+
+/* =========================================
+   系统列表排版
+   ========================================= */
+.system-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.system-list li {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(77, 74, 65, 0.1);
+    /* 微弱的分隔线 */
+    padding-bottom: 8px;
+}
+
+.log-prefix {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-right: 12px;
+    opacity: 0.7;
+}
+
+.system-log-micro {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    opacity: 0.5;
+    min-height: 60px;
+    /* 预留给 JS 动画的高度 */
+}
+
+/* =========================================
+   物理分割刻度线 (代替原有的 division-line)
+   ========================================= */
+.alignment-mark {
+    width: 100%;
+    height: 1px;
+    background-color: var(--soft-black);
+    position: relative;
+    opacity: 0.3;
+    margin: 20px 0;
+}
+
+.alignment-mark::before,
+.alignment-mark::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    width: 1px;
+    height: 11px;
+    background-color: var(--soft-black);
+}
+
+.alignment-mark::before {
+    left: 0;
+}
+
+.alignment-mark::after {
+    right: 0;
+}
+
+/* 手机端响应式堆叠 */
+@media screen and (max-width: 768px) {
+    .presentation-box {
+        flex-basis: 100%;
+    }
+
+    .hero-title-group {
+        margin-top: 10vh;
+        margin-bottom: 40px;
+    }
+
+    .vertical-edge-text {
+        display: none;
+        /* 手机端空间不足，隐藏垂直文字 */
+    }
+}

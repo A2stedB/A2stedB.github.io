@@ -61,3 +61,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const elementsToAnimate = document.querySelectorAll('.page');
   elementsToAnimate.forEach(el => observer.observe(el));
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const logContainer = document.getElementById('boot-log');
+  if (!logContainer) return;
+
+  // 虚拟的 C++ 底层启动日志序列
+  const logLines = [
+    '> INITIATING C++ COMPILER...', '> MEMORY_CACHE_ALIGNMENT: ADDR 0x2300',
+    '> BOX2D_PHYSICS_WORLD // LOADED', '> AWAITING_NEXT_DIRECTIVE...'
+  ];
+
+  let lineIndex = 0;
+
+  function printNextLine() {
+    if (lineIndex < logLines.length) {
+      const line = document.createElement('div');
+      line.textContent = logLines[lineIndex];
+      logContainer.appendChild(line);
+
+      lineIndex++;
+      // 模拟真实读取硬盘的不规则卡顿感 (100ms - 400ms)
+      const randomDelay = Math.random() * 300 + 100;
+      setTimeout(printNextLine, randomDelay);
+    } else {
+      const cursorLine = document.createElement('div');
+      cursorLine.innerHTML = `> <span class="blinking-cursor">_</span>`;
+      logContainer.appendChild(cursorLine);
+    }
+  }
+
+  setTimeout(printNextLine, 800);
+});
+
+const button = document.querySelector("[data-button]")
+
+button.addEventListener('click',()=>{
+    const background_element = document.querySelectorAll('[data-element="background"]')
+    console.log(background_element)
+
+    background_element.forEach((element) => {element.classList.replace('light', 'dark')})
+        console.log("being clicked")
+})

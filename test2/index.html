@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>He's Portfolio // SYS.INIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 游离于文档流之外的侧边垂直背景文本 -->
+    <div class="vertical-edge-text">SYS.OVERRIDE // PORTFOLIO_V1.0</div>
+
+    <!-- 全屏滑动主容器 -->
+    <main class="app-container">
+
+        <!-- ==========================================
+             SLIDE 1: PRESENTATION (系统自检与身份界定)
+             ========================================== -->
+        <section id="presentation" class="slide slide-section">
+            <div class="presentation-layout">
+
+                <!-- 左侧大字锚点 -->
+                <div class="hero-block">
+                    <h1 class="hero-title">Hi!</h1>
+                    <h1 class="hero-subtitle">I am He<span class="blinking-cursor">_</span></h1>
+                </div>
+
+                <!-- 右侧角框数据面板 -->
+                <div class="profile-block">
+                    <div class="nier-bracket-container">
+                        <div class="overlapping-label">USER_PROFILE // ACTIVE</div>
+
+                        <ul class="system-list">
+                            <li><span class="log-prefix">[STATUS]</span> CS Student</li>
+                            <li><span class="log-prefix">[ROLE]</span> Systems & Game Developer</li>
+                            <li><span class="log-prefix">[STACK]</span> C++, Box2D, Astro, JS</li>
+                            <li><span class="log-prefix">[FOCUS]</span> Memory Mgt & Algorithm Complexity</li>
+                        </ul>
+
+                        <!-- 动态终端日志输出区 -->
+                        <div id="boot-log" class="system-log-micro"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SLIDE 2: PROJECTS (横向数据档案库)
+             ========================================== -->
+        <section id="projects" class="slide slide-section">
+            <div class="projects-layout">
+
+                <!-- 顶部导轨与区列号 -->
+                <header class="slide-header">
+                    <h2 class="archive-title">DATA.ARCHIVE.V1 //</h2>
+                    <div class="alignment-mark"></div>
+                </header>
+
+                <!-- 横向弹性画廊 -->
+                <div class="project-scroll-container">
+
+                    <!-- Card 1 -->
+                    <div class="project-card">
+                        <div class="card-content">
+                            <h3 class="card-title">Kingless Dungeon</h3>
+                            <p class="card-desc">A game of hack and slash platformer made in Unity.</p>
+                            <span class="card-tech">[C#] [Unity]</span>
+                        </div>
+                        <button class="open-modal-btn" data-modal-open="kingless-modal">MORE (+)</button>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="project-card">
+                        <div class="card-content">
+                            <h3 class="card-title">Bunkers Inc.</h3>
+                            <p class="card-desc">A game of resource management and survival made with C++.</p>
+                            <span class="card-tech">[C++] [Algorithm]</span>
+                        </div>
+                        <button class="open-modal-btn" data-modal-open="bunkers-modal">MORE (+)</button>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="project-card">
+                        <div class="card-content">
+                            <h3 class="card-title">Pacific Tactics</h3>
+                            <p class="card-desc">A local multiplayer game of strategic made with JavaScript and Phaser.
+                            </p>
+                            <span class="card-tech">[JS] [Phaser]</span>
+                        </div>
+                        <button class="open-modal-btn" data-modal-open="pacific-modal">MORE (+)</button>
+                    </div>
+
+                </div>
+
+                <!-- 底部导轨 -->
+                <footer class="slide-footer">
+                    <div class="alignment-mark"></div>
+                    <div class="archive-footer-text">AWAITING_INPUT_</div>
+                </footer>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+                     SLIDE 3: SKILLS (模组装备栏 / 详情解析)
+                     ========================================== -->
+        <section id="skills" class="slide slide-section">
+            <div class="skills-layout">
+        
+                <!-- 左侧：技能矩阵 (装备栏) -->
+                <div class="skills-matrix-block">
+                    <header class="slide-header">
+                        <h2 class="archive-title">SYS.SKILLS_MATRIX //</h2>
+                        <div class="alignment-mark"></div>
+                    </header>
+        
+                    <div class="skills-grid">
+                        <!-- 默认激活第一个技能 -->
+                        <button class="skill-node active" data-skill-id="cpp">
+                            <span class="node-icon">C++</span>
+                            <span class="node-name">Core Systems</span>
+                        </button>
+                        <button class="skill-node" data-skill-id="physics">
+                            <span class="node-icon">PHY</span>
+                            <span class="node-name">Engine & Physics</span>
+                        </button>
+                        <button class="skill-node" data-skill-id="web">
+                            <span class="node-icon">WEB</span>
+                            <span class="node-name">Frontend Arch</span>
+                        </button>
+                        <button class="skill-node" data-skill-id="tools">
+                            <span class="node-icon">ENV</span>
+                            <span class="node-name">Dev Environment</span>
+                        </button>
+                    </div>
+                </div>
+        
+                <!-- 右侧：详情解析面板 (属性面板) -->
+                <div class="skill-details-block">
+                    <!-- 复用尼尔角框，并新增微弱的扫描线背景 -->
+                    <div class="nier-bracket-container scanline-bg">
+                        <div class="overlapping-label" id="detail-label">TARGET ACQUIRED // C++</div>
+        
+                        <h3 class="detail-title" id="detail-title">Core Systems & Architecture<span
+                                class="blinking-cursor">_</span></h3>
+        
+                        <!-- 这里的具体列表内容将由 JS 动态注入 -->
+                        <div id="detail-content">
+                            <ul class="system-list">
+                                <li><span class="log-prefix">[+]</span> Algorithmic complexity and custom algorithms.</li>
+                                <li><span class="log-prefix">[+]</span> Low-level memory management & smart pointers.</li>
+                                <li><span class="log-prefix">[+]</span> Object destruction & copy constructors.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
