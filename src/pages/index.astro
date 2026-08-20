@@ -2,6 +2,8 @@
 import Project_card from "../component/project_card_template.astro";
 import Project_modal from "../component/project_modal_template.astro";
 import Test_Project from "../project-page/test-project.astro";
+import About from "../component/about.md";
+import Focus from "../component/focus.md";
 ---
 
 <html lang="en">
@@ -10,13 +12,13 @@ import Test_Project from "../project-page/test-project.astro";
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
-		<link rel="icon" type="image/svg+xml" href="icon/border.svg">
+		<link rel="icon" type="image/svg+xml" href="icon/border.svg" />
 
-		<meta name="viewport" content="width=device-width initial-scale=1" />
+		<!-- <meta name="viewport" content="width=device-width initial-scale=1" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
 
 		<link rel="stylesheet" href="style/style.css" />
-		<!-- <link rel="stylesheet" href="style/presentation.css" /> -->
 		<link rel="stylesheet" href="style/font-settings.css" />
 		<link rel="stylesheet" href="style/colour-palette.css" />
 		<script src="../script/main.js"></script>
@@ -26,120 +28,89 @@ import Test_Project from "../project-page/test-project.astro";
 	</head>
 
 	<body>
-		<div id="background-base-colour" class="light" data-element="background"></div>
+		<div id="background-base-colour" class="light" data-element="background">
+		</div>
 		<div></div>
 		<div></div>
-		<div id="background-square-grid" class="light" data-element="background"></div>
+		<div id="background-square-grid" class="light" data-element="background">
+		</div>
 		<div id="dark-filter"></div>
-		<div class="vertical-edge-text" data-element="background">SYS.OVERRIDE // PORTFOLIO_V1.0</div>
+		<!-- <div class="vertical-edge-text" data-element="background">
+			SYS.OVERRIDE // PORTFOLIO_V1.0
+		</div> -->
 
 		<main id="main">
 			<section id="presentation" class="slide non-selectable">
-				<div id="presentation-container">
-					<div class="presentation-top-decoration">
-						<div class="presentation-top-decoration-container first">SYS. OVERRIDE // PROFILE</div>
-						<div class="presentation-top-decoration-container second"></div>
-						<div class="presentation-top-decoration-container third"></div>
+				<div id="presentation-top-decoration">
+					<div class="presentation-top-decoration-container first">
+						SYS.BOOT // V1.0 // PROFILE
 					</div>
-					<div class="presentation-box introduction">
-						<div>
-							<h1>Hi!</h1>
-							<h1>I am He<span id="underline">_</span></h1>
-							<!-- <button data-button>Change color</button> -->
-						</div>
+				</div>
+
+				<div id="presentation-grid">
+					<div id="presentation-name" class="presentation-box">
+						<div>He</div>
 					</div>
 
-					<div class="presentation-box introduction-content">
-						<div class="presentation introduction-content-decoration"></div>
-						<div>
-							<ul>
-								<li>CS Student</li>
-								<li>Software / Game developer</li>
-							</ul>
-						</div>
+					<div id="presentation-surname" class="presentation-box">
+						<div>Deng</div>
+					</div>
+
+					<div id="presentation-introduction" class="presentation-box">
+						<div>[ Software / Game Developer ]</div>
 					</div>
 				</div>
 			</section>
+			<!--presentation -->
 
-			<!-- <section id="presentation" class="slide non-selectable">
-					<div id="presentation-container">
-						<div class="presentation-box introduction">
-							<div class="hero-title-group">
-								<h1 class="hero-title" data-random-generation data-text="Hi!">
-									Hi!
-								</h1>
-								<h1 class="hero-subtitle">
-									I am He<span class="blinking-cursor">_</span>
-								</h1>
+			<section id="about" class="slide">
+				<div id="about-title" class="non-selectable">
+					<div class="align-bottom">ABOUT</div>
+				</div>
+
+				<div id="about-content-container">
+					<div id="about-container">
+						<!-- bio -->
+
+						<div id="about-content-biography" class="about-content-container">
+							<div class="about-content-title">[ BIO ]</div>
+							<div class="about-content-content">
+								<About />
 							</div>
 						</div>
 
-						<div class="presentation-box introduction-content">
-							<div class="nier-bracket-container">
-								<div class="overlapping-label">USER_PROFILE // ACTIVE</div>
+						<!-- focus -->
+						<div id="about-content-focus">
+							<div class="about-content-title">[ FOCUS ]</div>
+							<div class="about-content-content">
+								<Focus />
+							</div>
+						</div>
 
-								<ul class="system-list">
-									<li><span class="log-prefix">[STATUS]</span> CS Student</li>
-									<li>
-										<span class="log-prefix">[ROLE]</span> Systems & Game Developer
-									</li>
-									<li>
-										<span class="log-prefix">[STACK]</span> C++, Box2D, Astro &
-										JavaScript
-									</li>
-									<li>
-										<span class="log-prefix">[FOCUS]</span> Memory Management &
-										Algorithmic Efficiency
-									</li>
-								</ul>
-
-								<div id="boot-log" class="system-log-micro"></div>
+						<div id="about-content-extra">
+							<div class="about-content-title">[ EXTRA ]</div>
+							<div class="about-content-content">
+								<Focus />
 							</div>
 						</div>
 					</div>
-				</section>
 
-				<div class="alignment-mark"></div> -->
-
-			<!-- <div class="division-line"></div> -->
+					<div id="about-bottom-decoration-grid">
+						<div class="bordered-box"></div>
+						<div class="bordered-box"></div>
+						<div class="bordered-box"></div>
+						<div class="bordered-box"></div>
+					</div>
+				</div>
+			</section>
 
 			<section id="project" class="slide non-selectable">
-				<div id="project-container"></div>
+				<div id="project-container" class="slide-container"></div>
 			</section>
 
-			<!-- <div class="division-line"></div> -->
-
-			<!-- <div class="page" data-element-type="page" data-shown-status="hidden" data-delay="200">
-			<section id="project">
-				<div>
-					<h1>Projects</h1>
-				</div>
-				<div class="project-scroll-container">
-					<Project_card
-						project_name="Kingless Dungeon"
-						description="A game of hack and slash platformer made in Unity"
-					/>
-					<Project_card
-						project_name="Bunkers Inc."
-						description="A game of resource management and survival made with C++"
-					/>
-					<Project_card
-						project_name="Pacific Tactics"
-						description="A local multiplayer game of strategic made with JavaScript with Phaser"
-					/>
-				</div>
+			<section id="skills" class="slide non-selectable">
+				<div class="slide-container">a</div>
 			</section>
-		</div>
-
-		<div class="page" data-element-type="page" data-shown-status="hidden" data-delay="200">
-			<h1>Education</h1>
-		</div>
-		<div class="page"  data-element-type="page" data-shown-status="hidden" data-delay="200">
-			Contact
-		</div> -->
-			<!-- </div> -->
-			<!-- </div> -->
-			<!-- </div> -->
 		</main>
 
 		<div class="modal-container">

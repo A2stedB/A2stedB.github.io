@@ -1,0 +1,167 @@
+/* =========================================
+   全局变量与瑞士风格基础
+   ========================================= */
+:root {
+    --rice-white: #dcd8c0; /* 尼尔废土米白 */
+    --soft-black: #1c1914; /* 极深的柔和黑，参考了你图片的色调 */
+    --border-thickness: 2px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--rice-white);
+    color: var(--soft-black);
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* 瑞士设计标志性无衬线体 */
+    overflow: hidden;
+}
+
+/* 顶部极简状态条 */
+.sys-header {
+    height: 40px;
+    border-bottom: var(--border-thickness) solid var(--soft-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+/* =========================================
+   CSS Grid 核心网格系统
+   ========================================= */
+.swiss-grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 栏绝对网格 */
+    height: calc(100vh - 40px); /* 减去顶部 header 的高度 */
+}
+
+/* --- 左侧索引区 (占 1 到 3 栏) --- */
+.project-index {
+    grid-column: 1 / 4; 
+    border-right: var(--border-thickness) solid var(--soft-black);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace; /* 索引使用等宽机器字体 */
+}
+
+.index-title {
+    padding: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(28, 25, 20, 0.2);
+}
+
+.index-list {
+    list-style: none;
+    margin: 0; padding: 0;
+}
+
+.index-item {
+    padding: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(28, 25, 20, 0.2);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.item-num {
+    opacity: 0.4;
+    margin-right: 15px;
+    font-size: 0.75rem;
+}
+
+.index-item:hover {
+    background-color: rgba(28, 25, 20, 0.05);
+}
+
+/* 激活状态：颜色反转，产生物理按压感 */
+.index-item.active {
+    background-color: var(--soft-black);
+    color: var(--rice-white);
+}
+
+/* --- 右侧海报展示区 (占 4 到 12 栏) --- */
+.project-display {
+    grid-column: 4 / 13;
+    position: relative;
+    overflow: hidden; /* 防止巨大文字溢出 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 巨大的背景编号，产生空间深度 */
+.giant-number {
+    position: absolute;
+    top: -5%;
+    right: -2%;
+    font-size: 35vw;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(28, 25, 20, 0.1); /* 极细线框 */
+    z-index: 0;
+    pointer-events: none;
+    line-height: 1;
+}
+
+/* 瑞士设计标志性的夸张标题 (不对称、巨大、极简) */
+.giant-title {
+    position: relative;
+    z-index: 1;
+    font-size: 10vw; /* 视口宽度单位，让字撑满屏幕 */
+    margin: 40px 0 0 40px;
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    /* 配合背景网格滤镜会有极佳的叠加感 */
+}
+
+/* 吸底的数据详情面板 */
+.detail-panel {
+    position: relative;
+    z-index: 1;
+    border-top: var(--border-thickness) solid var(--soft-black);
+    background-color: var(--rice-white);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 面板内部再次网格切割 */
+    padding: 30px 40px;
+    gap: 30px;
+    align-items: end;
+}
+
+.tech-stack {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.description {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* 极简按钮 */
+.action-btn {
+    background-color: var(--soft-black);
+    color: var(--rice-white);
+    border: none;
+    padding: 15px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+}

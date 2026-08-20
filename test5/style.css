@@ -1,0 +1,211 @@
+/* =========================================
+   全局系统变量与底层环境
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --rice-white: #dcd8c0;
+    --soft-black: #1c1914;
+    --square-size: 0.3rem;
+    --grey-section: 25%;
+    --transparent-section: 75%;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    /* 暂用通用无衬线体替代 Rodin */
+    color: var(--soft-black);
+    overflow: hidden;
+}
+
+/* 选中文字时的反色高亮 (增加系统感) */
+::selection {
+    background: var(--soft-black);
+    color: var(--rice-white);
+}
+
+.non-selectable {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* =========================================
+   底层环境：背景色、网格与滤镜
+   ========================================= */
+#background-base-colour {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--rice-white);
+    z-index: -5;
+}
+
+#background-square-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(#c1bd9f, #c1bd9f var(--grey-section), transparent var(--grey-section), transparent var(--transparent-section), #c1bd9f var(--transparent-section), #c1bd9f),
+        linear-gradient(to right, #c1bd9f, #c1bd9f var(--grey-section), transparent var(--grey-section), transparent var(--transparent-section), #c1bd9f var(--transparent-section), #c1bd9f);
+    background-size: var(--square-size) var(--square-size);
+    mix-blend-mode: multiply;
+    opacity: 0.3;
+    z-index: -2;
+}
+
+#dark-filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, rgba(28, 25, 20, 0.3) 0%, rgba(28, 25, 20, 0.1) 8%, transparent 18%, transparent 82%, rgba(28, 25, 20, 0.1) 92%, rgba(28, 25, 20, 0.3) 100%);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* =========================================
+   ABOUT 页面布局 (Flex & Grid 结合)
+   ========================================= */
+#about {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    /* 暴露出底层的网格 */
+}
+
+/* --- 左侧承重柱 --- */
+#about-title {
+    flex: 0 0 auto;
+    background-color: var(--soft-black);
+    color: var(--rice-white);
+
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    padding: 5vh 3vw;
+    font-size: clamp(60px, 12vw, 150px);
+    font-weight: bold;
+    line-height: 0.8;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    /* 给柱子加一点极其微弱的投影 */
+}
+
+/* --- 右侧 12 栏绝对网格系统 --- */
+#about-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    /* 垂直居中对齐所有内容 */
+    padding: 0 4vw;
+    gap: 2vw;
+    /* 流式列间距 */
+}
+
+/* 巨型宣言区 (占前 7 列) */
+.about-statement {
+    grid-column: 1 / 8;
+    color: var(--soft-black);
+}
+
+.about-statement h2 {
+    font-size: clamp(30px, 4.5vw, 90px);
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -0.03em;
+    /* 稍微收紧字间距，更有冲击力 */
+}
+
+.highlight-text {
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+    font-weight: normal;
+    font-style: italic;
+    border-bottom: 2px solid var(--soft-black);
+    padding-bottom: 2px;
+}
+
+/* 数据化档案详情区 (占最后 4 列，留出第 8 列作为防波堤) */
+.about-details {
+    grid-column: 9 / 13;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    /* 流式垂直间距 */
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+}
+
+.detail-block {
+    border-top: 2px solid var(--soft-black);
+    /* 物理线框锚定 */
+    padding-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+.detail-block:hover {
+    transform: translateX(10px);
+    /* 悬停时的细微交互暗示 */
+}
+
+.block-label {
+    font-weight: bold;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.detail-block p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* =========================================
+   移动端响应式摧毁与重建
+   ========================================= */
+@media screen and (max-width: 900px) {
+    #about {
+        flex-direction: column;
+    }
+
+    #about-title {
+        writing-mode: horizontal-tb;
+        /* 手机端改为横向 */
+        width: 100%;
+        padding: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        box-sizing: border-box;
+    }
+
+    #about-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px 20px;
+        overflow-y: auto;
+    }
+
+    .about-statement {
+        margin-bottom: 40px;
+    }
+}

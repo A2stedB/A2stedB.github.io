@@ -1,7 +1,10 @@
 :root{
     /* --rice-white: #f5f5dd; */
     --rice-white: #c7c3a7;
+    /* --rice-white: #dad4bb; */
     --soft-black: #3c3a33;
+    --block-black: #22221d;
+    --block-white:#dfdab5;
     /* --soft-black: #4e4b42; */
 
     --background-light-theme: var(--rice-white);
@@ -10,6 +13,7 @@
     /*Grid*/
     --grid-dark-margin-colour:#0d0905;
     --grid-light-margin-colour:#c1bd9f;
+    /* --grid-light-margin-colour:#cfcbaf; */
 
     --background-light-theme-grid:
         linear-gradient(var(--grid-light-margin-colour), 

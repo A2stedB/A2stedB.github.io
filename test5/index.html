@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYS.ABOUT // Dossier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 底层视觉架构 -->
+    <div id="background-base-colour"></div>
+    <div id="background-square-grid"></div>
+    <div id="dark-filter"></div>
+
+    <main id="main">
+        <!-- ABOUT 页面核心结构 -->
+        <section id="about" class="slide">
+
+            <!-- 左侧承重柱：竖排标题 -->
+            <div id="about-title" class="non-selectable">
+                <div class="align-bottom">SYS // ABOUT</div>
+            </div>
+
+            <!-- 右侧核心网格容器 (12栏) -->
+            <div id="about-container">
+
+                <!-- 巨大的工程信仰宣言 (人类阅读层) -->
+                <div class="about-statement">
+                    <h2>
+                        Building systems<br>
+                        from the <span class="highlight-text">bare metal</span> up.
+                    </h2>
+                </div>
+
+                <!-- 数据化档案详情 (机器读取层) -->
+                <div class="about-details">
+                    <div class="detail-block">
+                        <span class="block-label">[01] OPERATOR_BIO</span>
+                        <p>My name is He, but feel free to call me DH. Currently engaged in Game Development studies at
+                            UCM, Spain.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <span class="block-label">[02] CORE_DIRECTIVE</span>
+                        <p>Fascinated by engine architecture, memory optimization, and the transition from
+                            Object-Oriented to Data-Oriented paradigms.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <span class="block-label">[03] ENVIRONMENT</span>
+                        <p>Operating primarily within C/C++ ecosystems, utilizing raw pointer management and customized
+                            toolchains.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

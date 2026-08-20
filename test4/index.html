@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiss x NieR // Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 顶部的系统状态条 -->
+    <header class="sys-header">
+        <span>SYS.ROOT // V1.0 // DATA.ARCHIVE</span>
+        <span>AWAITING_INPUT_</span>
+    </header>
+
+    <!-- Project Slide 的主体网格容器 -->
+    <main class="swiss-grid-container">
+        
+        <!-- 左侧：系统索引列表 (占 3 栏) -->
+        <aside class="project-index">
+            <div class="index-title">[ SELECT_PROJECT ]</div>
+            <ul class="index-list" id="project-list">
+                <!-- 列表项由 JS 动态生成，这里写死一个作为选中状态的示范 -->
+                <li class="index-item active" data-id="p1">
+                    <span class="item-num">01</span> KINGLESS DUNGEON
+                </li>
+                <li class="index-item" data-id="p2">
+                    <span class="item-num">02</span> BUNKERS INC.
+                </li>
+                <li class="index-item" data-id="p3">
+                    <span class="item-num">03</span> PACIFIC TACTICS
+                </li>
+            </ul>
+        </aside>
+
+        <!-- 右侧：巨幅海报展示区 (占 9 栏) -->
+        <article class="project-display" id="project-display">
+            <!-- 背景的巨大标号 -->
+            <div class="giant-number" id="display-num">01</div>
+            
+            <!-- 极度夸张的切割感标题 -->
+            <h1 class="giant-title" id="display-title">KINGLESS</h1>
+            
+            <!-- 吸底的硬核技术描述面板 -->
+            <div class="detail-panel">
+                <div class="tech-stack" id="display-tech">[ C# / Unity / Physics ]</div>
+                <p class="description" id="display-desc">
+                    A game of hack and slash platformer. Implementing custom rigid-body logic and state machines for continuous combat detection.
+                </p>
+                <button class="action-btn">ACCESS_DATA (+)</button>
+            </div>
+        </article>
+        
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
