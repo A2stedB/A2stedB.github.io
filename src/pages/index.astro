@@ -28,11 +28,19 @@ import Focus from "../component/focus.md";
 	</head>
 
 	<body>
-		<div id="background-base-colour" class="light" data-element="background">
+		<div
+			id="background-base-colour"
+			class="light"
+			data-element="background"
+		>
 		</div>
 		<div></div>
 		<div></div>
-		<div id="background-square-grid" class="light" data-element="background">
+		<div
+			id="background-square-grid"
+			class="light"
+			data-element="background"
+		>
 		</div>
 		<div id="dark-filter"></div>
 		<!-- <div class="vertical-edge-text" data-element="background">
@@ -56,7 +64,10 @@ import Focus from "../component/focus.md";
 						<div>Deng</div>
 					</div>
 
-					<div id="presentation-introduction" class="presentation-box">
+					<div
+						id="presentation-introduction"
+						class="presentation-box"
+					>
 						<div>[ Software / Game Developer ]</div>
 					</div>
 				</div>
@@ -70,24 +81,31 @@ import Focus from "../component/focus.md";
 
 				<div id="about-content-container">
 					<div id="about-container">
-						<!-- bio -->
+						<div class="about-left-column">
+							<!-- bio -->
+							<div
+								id="about-content-biography"
+								class="about-content-container"
+							>
+								<div class="about-content-title">[ BIO ]</div>
+								<div class="about-content-content">
+									<About />
+								</div>
+							</div>
 
-						<div id="about-content-biography" class="about-content-container">
-							<div class="about-content-title">[ BIO ]</div>
-							<div class="about-content-content">
-								<About />
+							<!-- focus -->
+							<div id="about-content-focus">
+								<div class="about-content-title">[ FOCUS ]</div>
+								<div class="about-content-content">
+									<Focus />
+								</div>
 							</div>
 						</div>
 
-						<!-- focus -->
-						<div id="about-content-focus">
-							<div class="about-content-title">[ FOCUS ]</div>
-							<div class="about-content-content">
-								<Focus />
-							</div>
-						</div>
-
-						<div id="about-content-extra">
+						<div
+							class="about-right-column"
+							id="about-content-extra"
+						>
 							<div class="about-content-title">[ EXTRA ]</div>
 							<div class="about-content-content">
 								<Focus />
@@ -95,12 +113,12 @@ import Focus from "../component/focus.md";
 						</div>
 					</div>
 
-					<div id="about-bottom-decoration-grid">
+					<!-- <div id="about-bottom-decoration-grid">
 						<div class="bordered-box"></div>
 						<div class="bordered-box"></div>
 						<div class="bordered-box"></div>
 						<div class="bordered-box"></div>
-					</div>
+					</div> -->
 				</div>
 			</section>
 
